@@ -10,6 +10,26 @@
 Additional documentation can be found at the [Marlin Home Page](http://marlinfw.org/).
 Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
+## Operational characteristics
+
+- All motors X,Y,Z,E0,Z2
+- SD Card
+- Bed and hotend Temp
+- Z probe, filament runout and end stops
+- Heat bed heater (inverted pin)
+- Hotend heater
+- EEPROM emulated on SD Card
+- Wifi UART
+- Buzzer
+
+## To do list
+
+- LCD FSMC 
+- Power Loss detect
+- I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
+- SPI Flash
+
+
 ## Marlin 2.0
 
 Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
@@ -38,25 +58,6 @@ To build Marlin 2.0 you'll need [Arduino IDE 1.8.8 or newer](https://www.arduino
   [SAMD51P20A](https://www.adafruit.com/product/4064)|ARM® Cortex-M4|Adafruit Grand Central M4
   [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)|ARM® Cortex-M4|
   [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)|ARM® Cortex-M4|
-
-## Operational characteristics
-
-- All motors X,Y,Z,E0,Z2
-- SD Card
-- Bed and hotend Temp
-- Z probe, filament runout and end stops
-- Heat bed heater (inverted pin)
-- Hotend heater
-- EEPROM emulated on SD Card
-- Wifi UART
-- Buzzer
-
-## To do list
-
-- LCD FSMC 
-- Power Loss detect
-- I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
-- SPI Flash
 
 ## Submitting Changes
 
