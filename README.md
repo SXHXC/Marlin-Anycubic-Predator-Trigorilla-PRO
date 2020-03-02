@@ -10,7 +10,7 @@
 Additional documentation can be found at the [Marlin Home Page](http://marlinfw.org/).
 Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
-## Operational characteristics
+## Operational characteristics for TRIGORILLA PRO
 
 - All motors X,Y,Z,E0,Z2
 - SD Card
