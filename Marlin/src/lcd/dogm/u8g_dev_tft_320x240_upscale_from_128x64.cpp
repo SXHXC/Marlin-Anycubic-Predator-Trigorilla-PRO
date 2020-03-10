@@ -129,7 +129,7 @@
   #define TFT_BTOKMENU_COLOR COLOR_RED
 #endif
 
-static uint32_t lcd_id = 0;
+static uint32_t lcd_id = 0x7796;
 
 #define ST7789V_CASET       0x2A   /* Column address register */
 #define ST7789V_RASET       0x2B   /* Row address register */
@@ -364,6 +364,7 @@ static const uint16_t ili9328_init[] = {
 };
 
 static const uint16_t ili9341_init[] = {
+  ESC_DELAY(100),
   ESC_REG(0x0010), ESC_DELAY(10),
   ESC_REG(0x0001), ESC_DELAY(200),
   ESC_REG(0x0036), 0x00E8,
@@ -577,46 +578,13 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
   #endif
   switch (msg) {
     case U8G_DEV_MSG_INIT:
-      dev->com_fn(u8g, U8G_COM_MSG_INIT, U8G_SPI_CLK_CYCLE_NONE, &lcd_id);
-
-      switch(lcd_id & 0xFFFF) {
-        case 0x8552:   // ST7789V
-          #ifdef LCD_USE_DMA_FSMC
-            writeEscSequence(st7789v_init);
-          #else
-            writeEscSequence8(u8g, dev, st7789v_init);
-          #endif
-          setWindow = setWindow_st7789v;
-          break;
-        case 0x9328:  // ILI9328
-          #ifdef LCD_USE_DMA_FSMC
-            writeEscSequence(ili9328_init);
-          #else
-            writeEscSequence16(u8g, dev, ili9328_init);
-          #endif
-          setWindow = setWindow_ili9328;
-          break;
-        case 0x9341:   // ILI9341
+      dev->com_fn(u8g, U8G_COM_MSG_INIT, U8G_SPI_CLK_CYCLE_NONE, &lcd_id); 
           #ifdef LCD_USE_DMA_FSMC
             writeEscSequence(ili9341_init);
           #else
             writeEscSequence8(u8g, dev, ili9341_init);
           #endif
           setWindow = setWindow_st7789v;
-          break;
-        case 0x0404:  // No connected display on FSMC
-          lcd_id = 0;
-          return 0;
-        case 0xFFFF:  // No connected display on SPI
-          lcd_id = 0;
-          return 0;
-        default:
-          if (lcd_id && 0xFF000000)
-            setWindow = setWindow_st7789v;
-          else
-            setWindow = setWindow_ili9328;
-          break;
-      }
 
       if (preinit) {
         preinit = false;

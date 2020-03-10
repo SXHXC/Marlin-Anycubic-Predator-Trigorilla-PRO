@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware for Anycubic TRIGORILLA PRO, this fosused on the Predator delta.
+# Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
@@ -9,31 +9,6 @@
 
 Additional documentation can be found at the [Marlin Home Page](http://marlinfw.org/).
 Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
-
-## Operational characteristics for TRIGORILLA PRO
-
-- All motors X,Y,Z,E0,Z2
-- SD Card
-- Bed and hotend Temp
-- Z probe, filament runout and end stops
-- Heat bed heater (inverted pin)
-- Hotend heater
-- EEPROM emulated on SD Card
-- Wifi UART
-- Buzzer
-
-## To do list
-
-- LCD FSMC 
-- Power Loss detect
-- I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
-- SPI Flash
-
-## Notes
-- This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
-- SWD pins are abaliable on Z+(PA13 SWDIO) and Z-(PA14 SWCLK) end stops, you need to connect some cables before the resistor next to the connector. Images coming soon.
-- **Be careful and never connect 3.3V of your USB debugger.**
-- If this is your first time uploading the code, you must be remove the jumper from JP1
 
 ## Marlin 2.0
 
