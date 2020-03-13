@@ -10,11 +10,6 @@
 Additional documentation can be found at the [Marlin Home Page](http://marlinfw.org/).
 Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
-## Marlin 2.0
-
-Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
-
-Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
 
 ## Operational characteristics
 
@@ -42,6 +37,12 @@ Download earlier versions of Marlin on the [Releases page](https://github.com/Ma
 - SWD pins are abaliable on Z+(PA13 SWDIO) and Z-(PA14 SWCLK) end stops, you need to connect some cables before the resistor next to the connector. Images coming soon.
 - **Be careful and never connect 3.3V of your USB debugger.**
 - If this is your first time uploading the code, you must be remove the jumper from JP1
+
+## Marlin 2.0
+
+Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
+
+Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
 
 ## Building Marlin 2.0
 
