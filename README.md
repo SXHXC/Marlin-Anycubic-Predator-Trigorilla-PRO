@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware
+# Marlin 3D Printer Firmware for Anycubic TRIGORILLA PRO, this fosused on the Predator delta.
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
@@ -15,6 +15,33 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
 
 Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
+
+## Operational characteristics
+
+- All motors X,Y,Z,E0,Z2
+- SD Card
+- Bed and hotend Temp 
+- Z probe, filament runout and end stops
+- Heat bed heater (inverted pin, **be very careful and make sure you have the line #define HEATER_BED_INVERTING TRUE**)
+- Hotend heater
+- EEPROM emulated on SD Card
+- Wifi UART
+- Buzzer
+- Touch Screen
+
+## To do list
+
+- LCD FSMC (now inverted and small)
+- Power Loss detect (maybe works)
+- I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
+- SPI Flash
+
+## Notes
+- For now this version uses the pin assignment of the MKS robin
+- This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
+- SWD pins are abaliable on Z+(PA13 SWDIO) and Z-(PA14 SWCLK) end stops, you need to connect some cables before the resistor next to the connector. Images coming soon.
+- **Be careful and never connect 3.3V of your USB debugger.**
+- If this is your first time uploading the code, you must be remove the jumper from JP1
 
 ## Building Marlin 2.0
 
