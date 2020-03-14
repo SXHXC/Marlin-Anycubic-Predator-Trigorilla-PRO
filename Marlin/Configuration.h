@@ -129,7 +129,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_ROBIN
+  #define MOTHERBOARD BOARD_TRIGORILLA_PRO
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu

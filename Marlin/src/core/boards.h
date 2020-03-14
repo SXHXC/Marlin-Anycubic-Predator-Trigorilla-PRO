@@ -298,6 +298,8 @@
 #define BOARD_GTM32_MINI              4021  // STM32F103VET6 controller
 #define BOARD_GTM32_MINI_A30          4022  // STM32F103VET6 controller
 #define BOARD_GTM32_REV_B             4023  // STM32F103VET6 controller
+#define BOARD_TRIGORILLA_PRO          4024  // aNYCUBIC TRIGORILLA PRO (STM32F103ZET6)
+
 
 //
 // ARM Cortex-M4F

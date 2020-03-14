@@ -23,6 +23,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - Wifi UART
 - Buzzer
 - Touch Screen
+- Definition created for trigorilla pro board and pins
 
 ## To do list
 
@@ -32,7 +33,6 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - SPI Flash
 
 ## Notes
-- For now this version uses the pin assignment of the MKS robin
 - This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
 - SWD pins are abaliable on Z+(PA13 SWDIO) and Z-(PA14 SWCLK) end stops, you need to connect some cables before the resistor next to the connector. Images coming soon.
 - **Be careful and never connect 3.3V of your USB debugger.**

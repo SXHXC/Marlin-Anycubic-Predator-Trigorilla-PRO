@@ -625,6 +625,12 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
         return u8g_dev_pb8v1_base_fn(u8g, dev, msg, arg);
       }
 
+  SERIAL_ECHOPAIR("LCD manufacturer ID: 0x", (lcd_id & 0xF000)>>12);
+  SERIAL_ECHO((lcd_id & 0x0F00)>>8);
+  SERIAL_ECHO((lcd_id & 0x00F0)>>4);
+  SERIAL_ECHOLN(lcd_id & 0x000F);
+  SERIAL_ECHOPAIR("FIN LCD manufacturer ");
+
       // Clear Screen
       setWindow(u8g, dev, 0, 0, LCD_FULL_PIXEL_WIDTH - 1, LCD_FULL_PIXEL_HEIGHT - 1);
       #ifdef LCD_USE_DMA_FSMC
@@ -648,7 +654,7 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
         #endif
 
         setWindow(u8g, dev, 14, 185,  77, 224);
-        drawImage(buttonD, u8g, dev, 32, 20, TFT_BTCANCEL_COLOR);
+        drawImage(buttonC, u8g, dev, 32, 20, TFT_BTOKMENU_COLOR);
 
         setWindow(u8g, dev, 90, 185, 153, 224);
         drawImage(buttonA, u8g, dev, 32, 20, TFT_BTARROWS_COLOR);
@@ -657,7 +663,7 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
         drawImage(buttonB, u8g, dev, 32, 20, TFT_BTARROWS_COLOR);
 
         setWindow(u8g, dev, 242, 185, 305, 224);
-        drawImage(buttonC, u8g, dev, 32, 20, TFT_BTOKMENU_COLOR);
+        drawImage(buttonD, u8g, dev, 32, 20, TFT_BTCANCEL_COLOR);
       #endif // TOUCH_BUTTONS
 
       return 0;
