@@ -35,10 +35,6 @@
 
 #define BOARD_INFO_NAME "TRIGORILLA PRO"
 
-
-#define DISABLE_JTAG
-
-
 // Limit Switches
 
 #define X_MAX_PIN          PG10 
@@ -61,13 +57,13 @@
 #define Z_STEP_PIN         PB9
 #define Z_DIR_PIN          PE0
 
-#define E0_ENABLE_PIN      PB8
-#define E0_STEP_PIN        PB4
-#define E0_DIR_PIN         PB5
+#define E1_ENABLE_PIN      PB8
+#define E1_STEP_PIN        PB4
+#define E1_DIR_PIN         PB5
 
-#define E1_ENABLE_PIN      PG8
-#define E1_STEP_PIN        PC7
-#define E1_DIR_PIN         PC6
+#define E0_ENABLE_PIN      PG8
+#define E0_STEP_PIN        PC7
+#define E0_DIR_PIN         PC6
 
 //
 // Temperature Sensors
@@ -109,11 +105,13 @@
  * Setting an 'LCD_RESET_PIN' may cause a flicker when entering the LCD menu
  * because Marlin uses the reset as a failsafe to revive a glitchy LCD.
  */
-#define LCD_RESET_PIN      PF11
+//#define LCD_RESET_PIN      PF11
 #define LCD_BACKLIGHT_PIN  PD13
 #define FSMC_CS_PIN        PD7  // NE4
 #define FSMC_RS_PIN        PD11  // A0
-#define LCD_SCREEN_ROT_180
+//#define LCD_SCREEN_ROT_180
+#define REVERSE_MENU_DIRECTION
+
 
 #define LCD_USE_DMA_FSMC   // Use DMA transfers to send data to the TFT
 #define FSMC_DMA_DEV       DMA2

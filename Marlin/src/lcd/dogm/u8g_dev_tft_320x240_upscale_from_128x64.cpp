@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -382,7 +382,6 @@ static const uint16_t ili9341_init[] = {
 };
 
 #if ENABLED(TOUCH_BUTTONS)
-
   static const uint8_t buttonD[] = {
     B01111111,B11111111,B11111111,B11111110,
     B10000000,B00000000,B00000000,B00000001,
@@ -405,7 +404,6 @@ static const uint16_t ili9341_init[] = {
     B10000000,B00000000,B00000000,B00000001,
     B01111111,B11111111,B11111111,B11111110,
   };
-
   #if ENABLED(REVERSE_MENU_DIRECTION)
 
     static const uint8_t buttonA[] = {
@@ -454,7 +452,6 @@ static const uint16_t ili9341_init[] = {
     };
 
   #else
-
     static const uint8_t buttonA[] = {
       B01111111,B11111111,B11111111,B11111110,
       B10000000,B00000000,B00000000,B00000001,
@@ -477,7 +474,6 @@ static const uint16_t ili9341_init[] = {
       B10000000,B00000000,B00000000,B00000001,
       B01111111,B11111111,B11111111,B11111110,
     };
-
     static const uint8_t buttonB[] = {
       B01111111,B11111111,B11111111,B11111110,
       B10000000,B00000000,B00000000,B00000001,
@@ -502,7 +498,6 @@ static const uint16_t ili9341_init[] = {
     };
 
   #endif
-
   static const uint8_t buttonC[] = {
     B01111111,B11111111,B11111111,B11111110,
     B10000000,B00000000,B00000000,B00000001,
@@ -527,7 +522,7 @@ static const uint16_t ili9341_init[] = {
   };
 
   void drawImage(const uint8_t *data, u8g_t *u8g, u8g_dev_t *dev, uint16_t length, uint16_t height, uint16_t color) {
-    uint16_t buffer[128];
+    uint16_t buffer[256];
 
     for (uint16_t i = 0; i < height; i++) {
       uint16_t k = 0;
@@ -604,6 +599,14 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
           #endif
           setWindow = setWindow_st7789v;
           break;
+        case 0x8066:   // Anycubic TFT
+          #ifdef LCD_USE_DMA_FSMC
+            writeEscSequence(ili9341_init);
+          #else
+            writeEscSequence8(u8g, dev, ili9341_init);
+          #endif
+          setWindow = setWindow_st7789v;
+          break; 
         case 0x0404:  // No connected display on FSMC
           lcd_id = 0;
           return 0;
@@ -611,12 +614,10 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
           lcd_id = 0;
           return 0;
         default:
-          #ifdef LCD_USE_DMA_FSMC
-            writeEscSequence(ili9341_init);
-          #else
-            writeEscSequence8(u8g, dev, ili9341_init);
-          #endif
-          setWindow = setWindow_st7789v;
+          if (lcd_id && 0xFF000000)
+            setWindow = setWindow_st7789v;
+          else
+            setWindow = setWindow_ili9328;
           break;
       }
 
@@ -624,12 +625,6 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
         preinit = false;
         return u8g_dev_pb8v1_base_fn(u8g, dev, msg, arg);
       }
-
-  SERIAL_ECHOPAIR("LCD manufacturer ID: 0x", (lcd_id & 0xF000)>>12);
-  SERIAL_ECHO((lcd_id & 0x0F00)>>8);
-  SERIAL_ECHO((lcd_id & 0x00F0)>>4);
-  SERIAL_ECHOLN(lcd_id & 0x000F);
-  SERIAL_ECHOPAIR("FIN LCD manufacturer ");
 
       // Clear Screen
       setWindow(u8g, dev, 0, 0, LCD_FULL_PIXEL_WIDTH - 1, LCD_FULL_PIXEL_HEIGHT - 1);
@@ -644,26 +639,27 @@ uint8_t u8g_dev_tft_320x240_upscale_from_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, u
       // bottom line and buttons
       #if ENABLED(TOUCH_BUTTONS)
 
-        setWindow(u8g, dev, 10, 170, 309, 171);
+        setWindow(u8g, dev, 10, 250, 470, 250);
         #ifdef LCD_USE_DMA_FSMC
-          LCD_IO_WriteMultiple(TFT_DISABLED_COLOR, 600);
+          LCD_IO_WriteMultiple(TFT_DISABLED_COLOR, 480);
         #else
           memset2(buffer, TFT_DISABLED_COLOR, 150);
           for (uint8_t i = 8; i--;)
             u8g_WriteSequence(u8g, dev, 150, (uint8_t *)buffer);
         #endif
 
-        setWindow(u8g, dev, 14, 185,  77, 224);
+        setWindow(u8g, dev, 45, 265,  108 , 304);
         drawImage(buttonC, u8g, dev, 32, 20, TFT_BTOKMENU_COLOR);
 
-        setWindow(u8g, dev, 90, 185, 153, 224);
-        drawImage(buttonA, u8g, dev, 32, 20, TFT_BTARROWS_COLOR);
-
-        setWindow(u8g, dev, 166, 185, 229, 224);
+        setWindow(u8g, dev, 154, 265, 217, 304);
         drawImage(buttonB, u8g, dev, 32, 20, TFT_BTARROWS_COLOR);
 
-        setWindow(u8g, dev, 242, 185, 305, 224);
+        setWindow(u8g, dev, 263, 265, 326, 304);
+        drawImage(buttonA, u8g, dev, 32, 20, TFT_BTARROWS_COLOR);
+
+        setWindow(u8g, dev, 371, 265, 434, 304);
         drawImage(buttonD, u8g, dev, 32, 20, TFT_BTCANCEL_COLOR);
+
       #endif // TOUCH_BUTTONS
 
       return 0;
