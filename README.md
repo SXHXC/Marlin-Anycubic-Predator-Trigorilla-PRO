@@ -13,7 +13,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## Operational characteristics
 
-- All motors X,Y,Z,E0,Z2
+- All motors X, Y, Z, E0, Z2
 - SD Card
 - Bed and hotend Temp 
 - Z probe, filament runout and end stops
@@ -27,7 +27,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## To do list
 
-- LCD FSMC (small)
+- LCD FSMC (small but fully functional)
 - Power Loss detect (maybe works)
 - I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
 - SPI Flash
@@ -54,11 +54,11 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
  - Plug the USB cable on trgirilla pro, the board will be start booting
  - Open STM32 ST-LINK Utility 
-   - Open file **(1)**
-   - Browse this route Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro and select firmware.bin
-   - Click connect to target **(2)**
-   - Program verify **(3)**
-   - Start **(4)**
+   - 1. Open file **(1**)
+   - 2. Browse this route Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro and select firmware.bin
+   - 3. Click connect to target **(2)**
+   - 4. Program verify **(3)**
+   - 5. Start **(4)**
    ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
  - **Disconnect usb debugger before testing or motors will stutter**
  - **Finished!**
