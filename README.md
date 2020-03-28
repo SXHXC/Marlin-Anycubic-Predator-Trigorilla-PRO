@@ -54,8 +54,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  6. Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
  7. Plug the USB cable on trgirilla pro, the board will be start booting
  8. Open STM32 ST-LINK Utility 
-   - Open file **(1**)
-   - Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
+   - Open file **(1**) Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
    - Click connect to target **(2)**
    - Program verify **(3)**
    - Start **(4)**
