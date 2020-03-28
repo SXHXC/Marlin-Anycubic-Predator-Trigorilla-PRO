@@ -46,14 +46,14 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - If you don't know how to weld, go very carefully haha
 
 - ## Steps to build and flash
- - How compile [Marlin.org Tutorial](https://marlinfw.org/docs/basics/install_platformio_vscode.html)
- - If you got some errors, try use [Auto Build Marlin](https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
- - **Turn off and disconnect AC power**
- - Cut and weld jumper cables ![welded cables](/Images/SWD_pins.png)
- - Move the jumper SW1 to USB and remove JP1 jumper ![welded cables](/Images/JUMPERS.png)
- - Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
- - Plug the USB cable on trgirilla pro, the board will be start booting
- - Open STM32 ST-LINK Utility 
+ 1. How compile [Marlin.org Tutorial](https://marlinfw.org/docs/basics/install_platformio_vscode.html)
+ 2. If you got some errors, try use [Auto Build Marlin](https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
+ 3. **Turn off and disconnect AC power**
+ 4. Cut and weld jumper cables ![welded cables](/Images/SWD_pins.png)
+ 5. Move the jumper SW1 to USB and remove JP1 jumper ![welded cables](/Images/JUMPERS.png)
+ 6. Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
+ 7. Plug the USB cable on trgirilla pro, the board will be start booting
+ 8. Open STM32 ST-LINK Utility 
    1. Open file **(1**)
    2. Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
      
@@ -61,8 +61,8 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
    4. Program verify **(3)**
    5. Start **(4)**
    ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
- - **Disconnect usb debugger before testing or motors will stutter**
- - **Finished!**
+ 9. **Disconnect usb debugger before testing or motors will stutter**
+ 10. **Finished!**
 
 
 ## Marlin 2.0
