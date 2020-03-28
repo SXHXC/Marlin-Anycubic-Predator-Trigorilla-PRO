@@ -55,7 +55,8 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - Plug the USB cable on trgirilla pro, the board will be start booting
  - Open STM32 ST-LINK Utility 
    1. Open file **(1**)
-   2. Browse this route and select firmware.bin >Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro 
+   2. Browse this route and select firmware.bin
+    >Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro 
    3. Click connect to target **(2)**
    4. Program verify **(3)**
    5. Start **(4)**
