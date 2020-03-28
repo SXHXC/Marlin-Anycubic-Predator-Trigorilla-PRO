@@ -53,12 +53,13 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - Move the jumper SW1 to USB and remove JP1 jumper ![welded cables](/Images/JUMPERS.png)
  - Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
  - Plug the USB cable on trgirilla pro, the board will be start booting
- - Open STM32 ST-LINK Utility ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
+ - Open STM32 ST-LINK Utility 
    - Open file (1)
    - Browse this route Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro and select firmware.bin
    - Click connect to target (2)
    - Program verify(3)
    - Start (4)
+   ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
  - **Disconnect usb debugger before testing or motors will stutter**
  - **Finished!**
 
