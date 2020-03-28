@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware for Anycubic TRIGORILLA PRO, this fosused on the Predator delta.
+# Marlin 3D Printer Firmware for Anycubic TRIGORILLA PRO, this focused on the Predator delta.
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
@@ -27,16 +27,13 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## To do list
 
-- LCD FSMC (now inverted and small)
+- LCD FSMC (small)
 - Power Loss detect (maybe works)
 - I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
 - SPI Flash
 
 ## Notes
 - This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
-- SWD pins are abaliable on Z+(PA13 SWDIO) and Z-(PA14 SWCLK) end stops, you need to connect some cables before the resistor next to the connector. Images coming soon.
-- **Be careful and never connect 3.3V of your USB debugger.**
-- If this is your first time uploading the code, you must be remove the jumper from JP1
 
 ## How compile and flash Trigorilla Pro
 
@@ -56,9 +53,10 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - Move the jumper SW1 to USB and remove JP1 jumper ![welded cables](/Images/JUMPERS.png)
  - Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC**
  - Plug the USB cable on trgirilla pro, the board will be start booting
- - Open STM32 ST-LINK Utility
+ - Open STM32 ST-LINK Utility ![STM32 ST-LINK Utility](/Images/STM32 ST-LINK Utility.png)
  - Open file (1), browse this route Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro and select firmware.bin
- - Click program (2)
+ - Click connect to target (2), program (3) and start (4)
+ - **Disconnect usb debugger before testing or motors will stutter**
  - **Finished!**
 
 
