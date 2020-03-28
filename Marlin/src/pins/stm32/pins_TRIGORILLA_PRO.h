@@ -20,7 +20,6 @@
  *
  */
 #pragma once
-
 /**
  * ANYCUBIC TRIGORILLA PRO (STM32F130ZET6) board pin assignments
  * It is the same used by the Tronxy X5SA thanks to ftoz1 for sharing it https://github.com/MarlinFirmware/Marlin/issues/14655
@@ -29,14 +28,23 @@
 
 #ifndef __STM32F1__
   #error "Oops! Select an STM32F1 board in 'Tools > Board.'"
-#elif HOTENDS > 1 || E_STEPPERS > 2
-  #error "TRIGORILLA PRO supports up to 2 E-steppers. Comment out this line to continue."
+#elif HOTENDS > 2 || E_STEPPERS > 2
+  #error "MKS Robin supports up to 2 hotends / E-steppers. Comment out this line to continue."
 #endif
 
 #define BOARD_INFO_NAME "TRIGORILLA PRO"
 
-// Limit Switches
+//
+// Release PB4 (Y_ENABLE_PIN) from JTAG NRST role
+//
+#define DISABLE_JTAG
+//#define DEBUG_EEPROM_READWRITE
+//#define FLASH_EEPROM_EMULATION  // Use Flash-based EEPROM emulation
 
+
+//
+// Limit Switches
+//
 #define X_MAX_PIN          PG10 
 #define Y_MAX_PIN          PA12 
 #define Z_MAX_PIN          PA14 
@@ -57,13 +65,14 @@
 #define Z_STEP_PIN         PB9
 #define Z_DIR_PIN          PE0
 
-#define E1_ENABLE_PIN      PB8
-#define E1_STEP_PIN        PB4
-#define E1_DIR_PIN         PB5
+#define E0_ENABLE_PIN      PB8
+#define E0_STEP_PIN        PB4
+#define E0_DIR_PIN         PB5
 
-#define E0_ENABLE_PIN      PG8
-#define E0_STEP_PIN        PC7
-#define E0_DIR_PIN         PC6
+#define E1_ENABLE_PIN      PG8
+#define E1_STEP_PIN        PC7
+#define E1_DIR_PIN         PC6
+
 
 //
 // Temperature Sensors
@@ -78,23 +87,25 @@
 #define HEATER_BED_PIN     PG11   // HOT BED
 #define HEATER_BED_INVERTING true
 
-#define CONTROLLER_FAN_PIN PD6   // FAN 
-#define E0_AUTO_FAN_PIN    PG14  // FAN 
-#define FAN_PIN            PG13  // FAN 
 //
 // Fans
 //
-#define POWER_LOSS_PIN     PA2   // PW_DET
-#define PS_ON_PIN          PA3   // PW_OFF
-#define FIL_RUNOUT_PIN     PA15  // MT_DET 
+#define CONTROLLER_FAN_PIN PD6   // FAN 
+#define E0_AUTO_FAN_PIN    PG14  // FAN 
+#define FAN_PIN            PG13  // FAN 
+
 //
 // Misc
 //
 #define BEEPER_PIN         PB0  
 #define LED_PIN            PD3 
+#define POWER_LOSS_PIN     PG2   // PG4 PW_DET
+#define PS_ON_PIN          PA2   // PW_OFF
+#define FIL_RUNOUT_PIN     PA15  // MT_DET 
+#define CASE_LIGHT_PIN     PG6
 
 /**
- * Note: TRIGORILLA PRO TFT screens use various TFT controllers
+ * Note: MKS Robin TFT screens use various TFT controllers
  * Supported screens are based on the ILI9341, ST7789V and ILI9328 (320x240)
  * ILI9488 is not supported
  * Define init sequences for other screens in u8g_dev_tft_320x240_upscale_from_128x64.cpp
@@ -105,13 +116,10 @@
  * Setting an 'LCD_RESET_PIN' may cause a flicker when entering the LCD menu
  * because Marlin uses the reset as a failsafe to revive a glitchy LCD.
  */
-//#define LCD_RESET_PIN      PF11
+#define LCD_RESET_PIN      PF11
 #define LCD_BACKLIGHT_PIN  PD13
 #define FSMC_CS_PIN        PD7  // NE4
 #define FSMC_RS_PIN        PD11  // A0
-//#define LCD_SCREEN_ROT_180
-#define REVERSE_MENU_DIRECTION
-
 
 #define LCD_USE_DMA_FSMC   // Use DMA transfers to send data to the TFT
 #define FSMC_DMA_DEV       DMA2

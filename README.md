@@ -38,6 +38,32 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - **Be careful and never connect 3.3V of your USB debugger.**
 - If this is your first time uploading the code, you must be remove the jumper from JP1
 
+## How compile and flash Trigorilla Pro
+
+- ## ¿What do you need?
+ - ST-LINK USB debugger or ST development board like NUCLEO Boards
+ - [STM32 ST-LINK Utility] (https://www.st.com/en/development-tools/stsw-link004.html#get-software)
+ - Dupont Jumper cables 
+ - Soldering iron
+ - Male Pin Header 
+ - If you don't know how to weld, go very carefully haha
+
+- ## Steps to build and flash
+ - How compile [Marlin.org Tutorial] (https://marlinfw.org/docs/basics/install_platformio_vscode.html)
+ - If you got some errors, try use [Auto Build Marlin] (https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
+ - ## Turn off and disconnect AC power
+ - Cut and weld jumper cables (like this image)
+ - ![welded cables] (images/SWD_pins.jpg)
+ - Move the jumper SW1 to USB (like this image)
+ - Remove JP1 jumper (like this image) 
+ - Connect the SDW pins (SWDIO, SWCLK and GND) don’t need VCC (like this images)
+ - Plug the USB cable on trgirilla pro, the board will be start booting
+ - Open STM32 ST-LINK Utility
+ - Open file (1), browse this route Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro and select firmware.bin
+ - Click program (2)
+ - ##Finished!
+
+
 ## Marlin 2.0
 
 Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
