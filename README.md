@@ -27,7 +27,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## To do list
 
-- LCD FSMC (small but fully functional)
+- LCD FSMC (small but fully functional)![TFT](/Images/TFT.png)
 - Power Loss detect (maybe works)
 - I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
 - SPI Flash
@@ -56,7 +56,6 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  8. Open STM32 ST-LINK Utility 
    - Open file **(1**)
    - Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
-     
    - Click connect to target **(2)**
    - Program verify **(3)**
    - Start **(4)**
