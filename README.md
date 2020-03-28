@@ -60,7 +60,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
    - Click connect to target **(2)**
    - Program verify **(3)**
    - Start **(4)**
-    ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
+   - ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
  9. **Disconnect usb debugger before testing or motors will stutter and returns the jumpers to the initial position**
  10. **Finished!**
 
