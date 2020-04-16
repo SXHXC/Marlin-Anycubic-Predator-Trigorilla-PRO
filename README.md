@@ -15,11 +15,12 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 - All motors X, Y, Z, E0, Z2
 - SD Card
+- LCD FSMC
+- EEPROM on flash emulation
 - Bed and hotend Temp 
 - Z probe, filament runout and end stops
-- Heat bed heater (inverted pin, **be very careful and make sure you have the line #define HEATER_BED_INVERTING TRUE**)
+- Heat bed heater (inverted pin, **be very careful and make sure you have the line #define HEATER_BED_INVERTING true**)
 - Hotend heater
-- EEPROM emulated on SD Card
 - Wifi UART
 - Buzzer
 - Touch Screen
@@ -27,13 +28,11 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## To do list
 
-- LCD FSMC (small but fully functional)![TFT](/Images/TFT.png)
-- Power Loss detect (maybe works)
-- I2C EEPROM (soft I2C, is connected to pins of the FSMC interface PG0, PG1)
-- SPI Flash
+- Power Loss detect 
 
 ## Notes
 - This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
+- Special thanks to Korbinian Heel [[@inib] (https://github.com/inib)]
 
 ## How compile and flash Trigorilla Pro
 
