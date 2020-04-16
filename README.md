@@ -49,11 +49,11 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  2. If you got some errors, try use [Auto Build Marlin](https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
  3. **Turn off and disconnect AC power**
  4. Cut and weld jumper cables ![welded cables](/Images/SWD_pins.png)
- 5. Move the jumper SW1 to USB and remove JP1 jumper ![welded cables](/Images/JUMPERS.png)
-    - JP1 It is connected to the pin BOOT0, which blocks the programming, it should be removed only when the table has the firmware stock. After this it doesn't matter if you put it on or not.
-    - SW1 Power the board from the USB port or from the external 24V source, for security purposes change this position at least while doing the programming.
+ 5. Move the jumper **SW1** to **USB** and **remove JP1 jumper** ![welded cables](/Images/JUMPERS.png)
+    - **JP1** It is connected to the pin BOOT0, which blocks the programming, it should be removed only when the table has the firmware stock. After this it doesn't matter if you put it on or not.
+    - **SW1** Power the board from the USB port or from the external 24V source, for security purposes change this position at least while doing the programming.
  6. Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC 5v or 3.3v (please don't connect it you could damage your board)**
- 7. Plug the USB cable on trgirilla pro, the board will be start booting as normally would
+ 7. **Plug the USB** cable on trgirilla pro.
  8. Open STM32 ST-LINK Utility 
    - Open file **(1**) Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
    - Click connect to target **(2)**
