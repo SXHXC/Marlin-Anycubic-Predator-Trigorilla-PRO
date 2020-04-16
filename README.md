@@ -17,7 +17,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - SD Card
 - LCD FSMC
 - EEPROM on flash emulation
-- Bed and hotend Temp 
+- Bed and hotend temp 
 - Z probe, filament runout and end stops
 - Heat bed heater (inverted pin, **be very careful and make sure you have the line #define HEATER_BED_INVERTING true**)
 - Hotend heater
@@ -32,7 +32,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## Notes
 - This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
-- Special thanks to Korbinian Heel [[@inib] (https://github.com/inib)]
+- Special thanks to Korbinian Heel [[@inib] (https://github.com/inib)]]
 
 ## How compile and flash Trigorilla Pro
 
@@ -58,7 +58,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
    - Program verify **(3)**
    - Start **(4)**
    - ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
- 9. **Disconnect usb debugger before testing or motors will stutter and returns the jumpers to the initial position**
+ 9. **Disconnect usb debugger before testing or motors will stutter, returns the jumpers to the initial position**
  10. **Finished!**
 
 
