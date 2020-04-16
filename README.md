@@ -32,7 +32,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## Notes
 - This version is not supported by the stock bootloader, you will need a USB debugger(ST-LINK).
-- Special thanks to Korbinian Heel [[@inib] (https://github.com/inib)]]
+- Special thanks to Korbinian Heel [[@inib](https://github.com/inib)]
 
 ## How compile and flash Trigorilla Pro
 
