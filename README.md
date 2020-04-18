@@ -62,7 +62,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - [![Trigorilla Pro reflash to Marlin 2.0.x](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x")    
  3. **Finished!**
  
-- ## Using USB Debigger ST-LINK  
+- ## Using USB Debugger ST-LINK  
  1. Cut and weld jumper cables ![welded cables](/Images/SWD_pins.png)
  2. Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC 5v or 3.3v (please don't connect it you could damage your board)**
  3. **Plug the USB** cable on trgirilla pro.
