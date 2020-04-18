@@ -61,13 +61,10 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  2. See this video 
  [![Everything Is AWESOME](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x") Format: ![Alt Text](url)
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=StTqXEQ2l-Y">
-     <img 
-      src="https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg" 
-      alt="Everything Is AWESOME" 
-      style="width:100%;">
-      </a>
+      <iframe width="1280" height="720" src="https://www.youtube.com/embed/g2cAJXle6t0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
+    
  3. **Finished!**
  
 - ## Using USB Debigger ST-LINK  
