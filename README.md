@@ -39,7 +39,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 - ## ¿What do you need?
  - Just an USB type-A cable included with your printer
- - **ST-LINK version**
+ **ST-LINK method**
  - ST-LINK USB debugger or ST development board like NUCLEO Boards
  - [STM32 ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html#get-software)
  - Dupont Jumper cables 
@@ -52,7 +52,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  2. If you got some errors, try use [Auto Build Marlin](https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
  3. **Turn off and disconnect AC power**
  4. Move the jumper **SW1** to **USB** and **remove JP1 jumper** ![welded cables](/Images/JUMPERS.png)
-    - **JP1** It is connected to the pin BOOT0, which blocks the programming, it should be removed only when the table has the firmware stock. After this it doesn't matter if you put it on or not.
+    - **JP1** It is connected to the pin BOOT0, which blocks the programming, it should be removed.
     - **SW1** Power the board from the USB port or from the external 24V source, for security purposes change this position at least while doing the programming.
 
 ## Steps to Flash
