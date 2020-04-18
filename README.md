@@ -39,7 +39,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## ¿What do you need?
  - Just an USB type-A cable included with your printer
- - ## ST-LINK method
+ - ## If you prefer ST-LINK method (optional)
  - ST-LINK USB debugger or ST development board like NUCLEO Boards
  - [STM32 ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html#get-software)
  - Dupont Jumper cables 
