@@ -59,14 +59,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - ## Using STM32 Flasher
  1. Download [STM32 Flasher](https://www.st.com/en/development-tools/flasher-stm32.html#get-software) 
  2. See this video 
- [![Everything Is AWESOME](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x") 
- [![Watch the video](https://i.imgur.com/g2cAJXle6t0.png)](https://youtu.be/g2cAJXle6t0)
-
-<div align="center">
-      <iframe width="1280" height="720" src="https://www.youtube.com/embed/g2cAJXle6t0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    
+ - [![Trigorilla Pro reflash to Marlin 2.0.x](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x")    
  3. **Finished!**
  
 - ## Using USB Debigger ST-LINK  
