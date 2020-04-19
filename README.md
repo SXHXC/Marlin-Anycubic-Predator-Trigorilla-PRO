@@ -55,7 +55,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  8. **Finished!**
  
 ## Backup and restore.
- - As you saw in the video, it is possible to make a backup of your stock firmware. in case you did not, in the precompiled folder, you will find this backup. The flash processing is the same seen in the video.
+ - As you saw in the video, it is possible to make a backup of your stock firmware. in case you did not, in the precompiled folder, you will find this backup. The flash process is the same seen in the video.
 
 
 ## How compile and flash Trigorilla Pro with ST-Link (Optional)
