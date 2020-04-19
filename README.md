@@ -31,7 +31,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 - Power Loss detect 
 
 ## Notes
-- This version is not supported by the stock bootloader.
+- At this time, this version is not supported by the stock bootloader as an SD card update.
 - Special thanks to Korbinian Heel [[@inib](https://github.com/inib)]
 - Special thanks to Slava Novgorodov [[@Slava N](https://www.youtube.com/channel/UC617QlzItK-dOeTTttKZq3A)] for sharing and making the video of the direct installation method
 
