@@ -58,7 +58,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - As you saw in the video, it is possible to make a backup of your stock firmware. in case you did not, in the precompiled folder, you will find this backup. The flash processing is the same seen in the video.
 
 
-## How compile and flash Trigorilla Pro
+## How compile and flash Trigorilla Pro with ST-Link (Optional)
 
 - ## ¿What do you need?
  - ST-LINK USB debugger or ST development board like NUCLEO Boards
@@ -68,7 +68,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  - Male Pin Header 
  - If you don't know how to weld, go very carefully haha
 
-- ## Steps to build and flash with ST-Link (Optional)
+- ## Steps to build and flash 
  1. Everything is preconfigured to work with the stock version, if it's your first time compiling Marlin, this can help you [How compile Marlin Tutorial](https://marlinfw.org/docs/basics/install_platformio_vscode.html)
  2. If you got some errors, try use [Auto Build Marlin](https://marlinfw.org/docs/basics/install_platformio.html#auto-build-marlin)
  3. **Turn off and disconnect AC power**
