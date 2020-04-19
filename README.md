@@ -39,13 +39,6 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 ## ¿What do you need?
  - Just an USB type-A cable included with your printer
- - ## If you prefer ST-LINK method (optional)
- - ST-LINK USB debugger or ST development board like NUCLEO Boards
- - [STM32 ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html#get-software)
- - Dupont Jumper cables 
- - Soldering iron
- - Male Pin Header 
- - If you don't know how to weld, go very carefully haha
 
 ## Steps to build and prepare the board
  1. Everything is preconfigured to work with the stock version, if it's your first time compiling Marlin, this can help you [How compile Marlin Tutorial](https://marlinfw.org/docs/basics/install_platformio_vscode.html)
@@ -54,27 +47,14 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  4. Move the jumper **SW1** to **USB** and **remove JP1 jumper** ![welded cables](/Images/JUMPERS.png)
     - **JP1** It is connected to the pin BOOT0, which blocks the programming, it should be removed.
     - **SW1** Power the board from the USB port or from the external 24V source, for security purposes change this position at least while doing the programming.
-
-## Steps to Flash
-- ## Using STM32 Flasher
- 1. Download [STM32 Flasher](https://www.st.com/en/development-tools/flasher-stm32.html#get-software) 
- 2. **See this video**
+ 5. Download [STM32 Flasher](https://www.st.com/en/development-tools/flasher-stm32.html#get-software) 
+ 6. **See this video**
  - [![Trigorilla Pro reflash to Marlin 2.0.x](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x")    
- 3. **Finished!**
+ 7. **restores all jumpers to their original position** 
+ 8. **Finished!**
  
-- ## Using USB Debugger ST-LINK  
- 1. Cut and weld jumper cables ![welded cables](/Images/SWD_pins.png)
- 2. Connect the SDW pins (SWDIO, SWCLK and GND) to your debugger **don’t need VCC 5v or 3.3v (please don't connect it you could damage your board)**
- 3. **Plug the USB** cable on trgirilla pro.
- 4. Open STM32 ST-LINK Utility 
-   - Open file **(1**) Browse this route `Marlin-Anycubic-Predator-Trigorilla-PRO\.pio\build\trigorilla_pro` and select firmware.bin
-   - Click connect to target **(2)**
-   - Program verify **(3)**
-   - Start **(4)**
-   - ![STM32 Utility](/Images/STM32%20ST-LINK%20Utility.png)
- 5. **Disconnect usb debugger before testing or motors will stutter, returns the jumpers JP1 and SW1 to the initial position**
- 6. **Finished!**
- 
+## Backup and restore.
+ - As you saw in the video, it is possible to make a backup of your stock firmware. in case you did not, in the precompiled folder, you will find this backup. The flash processing is the same seen in the video.
 
 
 ## Marlin 2.0
