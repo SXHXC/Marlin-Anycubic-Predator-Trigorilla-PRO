@@ -51,7 +51,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
  5. Download [STM32 Flasher](https://www.st.com/en/development-tools/flasher-stm32.html#get-software) 
  6. **See this video**
  - [![Trigorilla Pro reflash to Marlin 2.0.x](https://img.youtube.com/vi/g2cAJXle6t0/0.jpg)](https://www.youtube.com/watch?v=g2cAJXle6t0 "ANYCUBIC Predator original board Trigorilla Pro reflash to Marlin 2.0.x")    
- 7. **restores all jumpers to their original position** 
+ 7. **Restores all jumpers to their original position** 
  8. **Finished!**
  
 ## Backup and restore.
